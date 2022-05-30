@@ -1,0 +1,678 @@
+@font-face {
+    font-family: cp-heavy;
+    src: url(fonts/CooperHewitt-Heavy.otf);
+}
+
+@font-face {
+    font-family: time_burner_bold;
+    src: url(fonts/timeburnerbold.ttf);
+}
+
+@font-face {
+    font-family: time_burner_nav;
+    src: url(fonts/timeburner_regular.ttf);
+}
+
+@font-face {
+    font-family: pnova-sb;
+    src: url(fonts/FontsFree-Net-Proxima-Nova-Sbold.otf);
+}
+
+@font-face {
+    font-family: pnova-regular;
+    src: url(fonts/FontsFree-Net-proxima_nova_reg-webfont.ttf);
+}
+
+@font-face {
+    font-family: nova-bold;
+    src: url(fonts/FontsFree-Net-Proxima-Nova-Bold.otf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: rgb(232, 217, 250);
+    background: linear-gradient(180deg, rgb(240, 231, 252) 60%, rgba(181, 184, 254, 1) 100%);
+    background-attachment: fixed;
+}
+
+.index-container {
+    display: grid;
+    grid-template:
+        "header"4rem "section"35rem "main"35rem "info"20rem "anuncio"25rem "footer"auto;
+}
+
+#header {
+    grid-area: header;
+    background-color: rgba(232, 217, 250);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .9);
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.logo {
+    width: 12rem;
+    margin: .4rem 0 .4rem 5rem;
+}
+
+.nav-toggle {
+    color: #7F38DE;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 3rem;
+    display: none;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu-link {
+    color: #7F38DE;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 4rem;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 1.1rem;
+    font-family: time_burner_bold;
+    margin: 0 .6rem;
+    line-height: 4rem;
+    transition: all .2s ease-in-out;
+}
+
+.nav-menu-link:hover {
+    font-size: 1.2rem;
+}
+
+#carrusel-container {
+    grid-area: section;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all 1s ease-in;
+    background-image: url(multimedia/images/index/carrusel/carruselUno.jpg);
+    animation: carrusel 16s infinite linear;
+}
+
+.carrusel-contenido {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 22, 40, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel-contenido h1 {
+    padding-bottom: .5rem;
+    font-family: time_burner_bold;
+    color: #e8d9fa;
+    text-shadow: 5px px 1px #432F61;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.carrusel-contenido a {
+    text-decoration: none;
+    text-align: center;
+    font-family: time_burner_nav;
+    color: #e8d9fa;
+    padding: .5rem .5rem;
+    border: 1px solid #fff;
+    text-shadow: 3px 1px 3px #432F61;
+}
+
+.carrusel-contenido a:hover {
+    background-color: #fff;
+    color: #333;
+    text-shadow: none;
+}
+
+@keyframes carrusel {
+    0% {
+        background-image: url(multimedia/images/index/carrusel/carruselUno.jpg);
+    }
+
+    25% {
+        background-image: url(multimedia/images/index/carrusel/carruselUno.jpg);
+    }
+
+    26% {
+        background-image: url(multimedia/images/index/carrusel/carruselDos.jpg);
+    }
+
+    50% {
+        background-image: url(multimedia/images/index/carrusel/carruselDos.jpg);
+    }
+
+    51% {
+        background-image: url(multimedia/images/index/carrusel/carruselTres.jpg);
+    }
+
+    75% {
+        background-image: url(multimedia/images/index/carrusel/carruselTres.jpg);
+    }
+
+    76% {
+        background-image: url(multimedia/images/index/carrusel/carruselCuatro.jpg);
+    }
+
+    100% {
+        background-image: url(multimedia/images/index/carrusel/carruselCuatro.jpg);
+    }
+}
+
+.index-main {
+    grid-area: main;
+    width: 100%;
+    height: 100vh;
+    margin: 3rem 0 0 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-uno {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.main-uno h2 {
+    color: rgb(0, 0, 0);
+    font-family: pnova-sb;
+    font-size: 3em;
+    margin: 0 0 1.5rem 1rem;
+}
+
+.main-uno p {
+    color: rgb(0, 0, 0);
+    font-family: pnova-regular;
+    font-size: 1.3em;
+    margin: 0 0 1.5rem 1rem;
+}
+
+.enlace {
+    margin: 2.5rem 0 0 1rem;
+}
+
+.enlace a {
+    text-decoration: none;
+    color: #fff;
+    font-family: pnova-sb;
+    font-size: 1.5rem;
+    background-color: rgb(0, 0, 0);
+    padding: 1.2rem 2.5rem;
+}
+
+.enlace a:hover {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #e8d9fa;
+    color: rgb(0, 0, 0);
+}
+
+.images {
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+}
+
+.info-container {
+    grid-area: info;
+    color: rgb(0, 0, 0);
+    font-family: pnova-regular;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: 10rem 0 0 0;
+}
+
+.info-item-uno {
+    text-align: center;
+}
+
+.info-item-dos {
+    margin: 1.5rem 0;
+}
+
+.info-item-tres {
+    text-align: center;
+}
+
+.icons-container {
+    grid-area: info;
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.anuncio-container {
+    grid-area: anuncio;
+    background-image: url(multimedia/images/anuncio.png);
+    position: relative;
+}
+
+.anuncio {
+    color: white;
+    font-family: cp-heavy;
+    font-size: 3rem;
+    position: absolute;
+    left: 15rem;
+    top: 13.5rem;
+
+}
+
+footer {
+    grid-area: footer;
+    bottom: 0;
+    right: 0;
+}
+
+.footer-container {
+    background-color: #2C284A;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 1rem sans-serif;
+    padding: 3rem 3rem 4rem 3rem;
+}
+
+.footer-logo {
+    width: 60%;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-left {
+    width: 30%;
+}
+
+.footer-links {
+    display: inline-block;
+    font-family: time_burner_bold;
+    font-size: 1rem;
+    color: #e8d9fa;
+    margin: 1.3rem 0 .7rem;
+}
+
+.footer-links a {
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-company-name {
+    color: #e8d9fa;
+    font-size: .9rem;
+    font-weight: normal;
+    margin: 0 3rem 0 0;
+    text-align: center;
+}
+
+
+.footer-center {
+    width: 35%;
+}
+
+.footer-center i {
+    color: #e8d9fa;
+    font-size: 1.5rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.6rem;
+    margin: .6rem 1rem;
+    vertical-align: middle;
+}
+
+i.fa-envelope {
+    font-size: 1rem;
+    line-height: 2.3rem;
+}
+
+.footer-center p {
+    display: inline-block;
+    color: #e8d9fa;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: .9rem;
+}
+
+.footer-center p a {
+    color: #e8d9fa;
+    text-decoration: none;
+}
+
+.footer-right {
+    width: 30%;
+}
+
+.footer-company-about {
+    line-height: 1.2rem;
+    color: #e8d9fa;
+    font-size: .8rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-company-about span {
+    display: block;
+    color: #e8d9fa;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1.3rem;
+}
+
+.footer-icons {
+    margin-top: 1.5rem;
+    display: inline-block;
+}
+
+.footer-icons a {
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    border-radius: .1rem;
+    font-size: 1.3rem;
+    color: #e8d9fa;
+    text-align: center;
+    line-height: 2.2rem;
+    margin-right: .2rem;
+    margin-bottom: .3rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-icons a:hover,
+.mail a:hover,
+.mail a i:hover {
+    color: #7F38DE;
+}
+
+.productos-container {
+    display: grid;
+    grid-template:
+        "header"4rem "image"20.5rem "intro"20rem "main"auto "footer"auto;
+}
+
+.image-intro-container {
+    grid-area: image;
+}
+
+.image-intro {
+    width: 100%;
+    height: auto;
+}
+
+.intro-container {
+    grid-area: intro;
+    background-image: url(multimedia/images/producto.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+}
+
+.intro-texto h1 {
+    color: rgb(255, 255, 255);
+    font-family: pnova-sb;
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 2.2rem 1.2rem 1rem 0;
+}
+
+.intro-texto p {
+    color: rgb(255, 255, 255);
+    font-family: pnova-regular;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.productos-main-container {
+    grid-area: main;
+}
+
+.productos-main-container h2 {
+    color: #000;
+    font-family: pnova-sb;
+    font-size: 2rem;
+}
+
+.productos-main-container p {
+    color: #000;
+    font-family: pnova-regular;
+    font-size: 1.2rem;
+}
+
+.productos-amuletos {
+    grid-area: main;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+
+.productos-amuletos img {
+    width: 40%;
+    height: 100vh;
+}
+
+.amuletos-productos h2 {
+    margin: 2rem 0 0 4.5rem;
+}
+
+.amuletos-productos p {
+    align-self: flex-start;
+    margin: 2rem 12rem 0 4.5rem;
+}
+
+.amuletos-productos img {
+    width: 20%;
+    height: auto;
+    margin: 5rem 0 0 5rem;
+}
+
+.productos-anillos {
+    grid-area: main;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.productos-anillos img {
+    width: 40%;
+    height: 100vh;
+    order: -1;
+}
+
+.anillos-productos h2 {
+    text-align: right;
+    margin: 3rem 4.5rem 0 0;
+}
+
+.anillos-productos p {
+    text-align: right;
+    margin: 2rem 4.5rem 0 14rem;
+}
+
+.anillos-images {
+    display: flex;
+    justify-content: right;
+}
+
+.anillos-productos img {
+    width: 20%;
+    height: auto;
+    margin: 6rem 5rem 0 0;
+}
+
+.productos-aros {
+    grid-area: main;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.productos-aros img {
+    width: 40%;
+    height: 100vh;
+}
+
+.aros-productos h2 {
+    text-align: left;
+    margin: 3rem 0 0 4.5rem;
+}
+
+.aros-productos p {
+    text-align: left;
+    margin: 2rem 11rem 0 4.5rem;
+}
+
+.aros-productos img {
+    width: 20%;
+    height: auto;
+    margin: 6rem 0 0 5rem;
+}
+
+.productos-dijes {
+    grid-area: main;
+    width: 100%;
+    height: calc(100vh - 2rem);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 5rem 0 5rem 0;
+}
+
+.productos-dijes img {
+    width: 40%;
+    height: 100vh;
+}
+
+.dijes-productos h2 {
+    text-align: right;
+    margin: 3rem 4.5rem 0 0;
+}
+
+.dijes-productos p {
+    text-align: right;
+    margin: 2rem 4.5rem 0 10rem;
+}
+
+.dijes-images {
+    display: flex;
+    justify-content: right;
+}
+
+.dijes-productos img {
+    width: 20%;
+    height: auto;
+    margin: 5rem 5rem 0 0;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 11.5rem;
+        margin: .3rem 0 .3rem 2rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 1rem;
+        background-color: #7F38DE;
+        position: fixed;
+        left: 0;
+        top: 4rem;
+        width: 100%;
+        padding: 1.3rem 0;
+        height: calc(100% - 4rem);
+        overflow-y: auto;
+        left: 100%;
+        transition: left .3s;
+    }
+
+    .nav-menu-link {
+        color: #e8d9fa;
+    }
+
+    .nav-menu-link:hover {
+        color: #2C284A;
+    }
+
+    .nav-toggle {
+        display: block;
+        margin: 0 2rem;
+        line-height: 3.5rem;
+    }
+
+    .nav-menu-visible {
+        left: 0;
+    }
+
+    .anuncio {
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    .footer-container {
+        margin-left: 0;
+    }
+
+    .footer-center i {
+        margin: 0;
+    }
+}
